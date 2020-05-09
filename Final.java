@@ -11,7 +11,7 @@ public class Final {
         Scanner sc = new Scanner(new File("C:\\Users\\User\\Desktop\\f2-exam\\file.txt"));
            
             while(sc.hasNextLine()){
-            String key = "" ;
+           
             String currentline = "";
             double w = 0;
             double r = 0;
@@ -94,12 +94,25 @@ public class Final {
             }
         Scanner s2 = new Scanner(System.in);
         String key = s2.nextLine();
-        
+        double totalvolumn = 0;
+        double totalarea = 0;
         for(Shape2D s : shape2ds){
-            int totalarea = 0;
-            if(s.getName()==key){
-
+            
+            if(s.getName().contains(key)){
+                totalarea += s.getArea();
             }
         }
+        for(Shape3D s: shape3ds){
+            
+            if(s.getName().contains(key)){
+                totalvolumn += s.getVolumn();
+                totalarea += s.getArea();
+            }
+        }
+        s2.close();
+        System.out.println("total area =" + totalarea);
+        System.out.println("total volumn =" + totalvolumn);
+
+
     }
 }
