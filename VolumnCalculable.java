@@ -1,3 +1,3 @@
 public interface VolumnCalculable {
-    double getvolumn();
+    double getVolumn();
 }
