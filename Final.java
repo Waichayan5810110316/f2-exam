@@ -70,7 +70,14 @@ public class Final {
                 }
                 else{
                    System.out.println("Circle r ="+ r);
+                   shape2ds.add(new Circle(currentline.substring(0,1),r));
                }
+            }
+            for(Shape2D s : shape2ds){
+                System.out.println(s.getName());
+            }
+            for(Shape3D s : shape3ds){
+                System.out.println(s.getName());
             }
 
 
